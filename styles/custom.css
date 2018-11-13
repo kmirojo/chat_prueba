@@ -1,0 +1,133 @@
+/* -- ↓↓ Reset ↓↓ -- */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#wrapper{
+    width: 80%;
+    margin: 10px auto;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.chat_wrapper{
+    width: 70%;
+    margin: 10px auto;
+    background-color: #fff;
+}
+
+#chat{
+    min-height: 500px;
+    border: solid 1px #b3b3b3;
+    padding: 10px;
+}
+
+.textarea{
+    width: 100%;
+    border: 1px solid #b3b3b3;
+    outline: none;
+    padding: 10px;
+    margin-top: 10px;
+    resize: none;
+}
+
+/* ==================================================================== */
+/* --- ↓↓ Chat Content | Ajenos ↓↓ ------------------------------------ */
+/* ==================================================================== */
+.chat_content {
+    background-color: #f5f5f5;
+    min-height: 120px;
+    display: block;
+    padding: 10px 13px;
+    max-height: 500px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+.chat_content .date {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.chat_content .date_bar {
+    display: inline-block;
+    font-size: .8rem;
+    background-color: #a2e2ff;
+    border: solid 1px #23baff;
+    padding: 3px 10px;
+}
+.chat_content .message {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.chat_content .message:before, .chat_content .message:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+.chat_content .message .cloud {
+    position: relative;
+    display: inline-block;
+    max-width: 70%;
+}
+.chat_content .message .cloud_message {
+    font-size: 14px;
+    word-break: break-word;
+}
+.chat_content .message .cloud_hour {
+    margin-top: 7px;
+    font-size: .5rem;
+    text-align: right;
+}
+.chat_content .message .cloud_userName {
+    margin-bottom: 7px;
+    font-size: .6rem;
+}
+.chat_content .message .cloud.theirs {
+    z-index: 1;
+    left: 15px;
+    float: left;
+    background-color: #edffd8;
+    border: solid 1px #59a500;
+    padding: 7px 5px 7px 13px;
+}
+.chat_content .message .cloud.theirs .profile_img {
+    left: -24px;
+}
+.chat_content .message .cloud.theirs .cloud_hour {
+    float: right;
+}
+.chat_content .message .cloud.theirs .cloud_userName {
+    color: #59a500;
+    text-align: left;
+}
+.chat_content .message .cloud.mine {
+    z-index: 1;
+    right: 15px;
+    float: right;
+    background-color: #a2e2ff;
+    border: solid 1px #23baff;
+    padding: 7px 13px 7px 5px;
+}
+.chat_content .message .cloud.mine.def {
+    background-color: #ccc;
+    border-color: #8c8c8c;
+}
+.chat_content .message .cloud.mine .profile_img {
+    right: -24px;
+}
+.chat_content .message .cloud.mine .cloud_hour {
+    float: left;
+}
+.chat_content .message .cloud.mine .cloud_userName {
+    text-align: right;
+}
+.chat_content .message .cloud .profile_img {
+    position: absolute;
+    z-index: 1;
+    background: red;
+    width: 35px;
+    height: 35px;
+    bottom: calc(50% - (35px/2));
+    border-radius: 50%;
+}
