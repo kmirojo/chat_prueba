@@ -28,7 +28,7 @@ switch ($_REQUEST['action']) {
 
         foreach($query_fetch as $message){
             $chat .= ' <div class="message">
-                            <div class="cloud animated bounceIn mine"> 
+                            <div class="cloud animated bounceIn theirs"> 
                                 <img class="profile_img" src="http://mongui.es/codepen/VLdNKN-avatar03.png" alt="">
                                 <div class="cloud_userName">' . $message->user . '</div>
                                 <div class="cloud_message">' . $message->message . '</div>

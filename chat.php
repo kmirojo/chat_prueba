@@ -1,7 +1,9 @@
 <?php 
 session_start();
 
-$_SESSION['username'] = 'User #1';
+$_SESSION['username'] = $_POST['nameReg'];
+// $_SESSION['username'] = 'User #1';
+$userName = $_POST['nameReg'];
 
 ?>
 <!DOCTYPE html>
@@ -22,7 +24,7 @@ $_SESSION['username'] = 'User #1';
 <body>
 
     <div id="wrapper">
-        <!-- <h1>Prueba Chat</h1> -->
+        <h1><?php echo $userName;?></h1>
 
         <div class="chat_wrapper">
             <div id="chat" class="chat_content"></div>
